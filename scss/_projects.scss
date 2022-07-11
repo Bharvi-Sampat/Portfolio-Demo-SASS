@@ -4,13 +4,12 @@
   &__bio-image {
     height: 30vh;
     width: 100%;
-    background: 
-    linear-gradient(
-      to right,
-      rgba($primary-color, 0.9),
-      rgba($primary-color, 0.3),
-    ),
-    url('../img/woman.jpg') center top;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url("../img/woman.jpg") center top;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -22,7 +21,6 @@
       margin-bottom: 2rem;
     }
   }
-
 
   &__items {
     width: 60vw;
@@ -37,20 +35,23 @@
     border-bottom: 5px solid $secondary-color;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 10px;
 
     img {
       width: 100%;
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 100%;
       left: 0;
       height: 100%;
       width: 100%;
-      background:$secondary-color;
+
+      background: $secondary-color;
       opacity: 0;
+
       @include transition-ease;
     }
 
@@ -84,7 +85,9 @@
     @include transition-ease;
 
     &:hover {
-      color: set-text-color(set-text-color($secondary-color));
+      color: set-text-color($secondary-color);
+      font-weight: bold;
+      @include transition-ease;
     }
   }
 
@@ -94,7 +97,6 @@
   }
 
   footer {
-    transform: rotate(90deg)
-    translate(-3rem, -5rem);
+    transform: rotate(90deg) translate(-3rem, -5rem);
   }
 }

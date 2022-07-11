@@ -4,13 +4,12 @@
   &__bio-image {
     height: 50vh;
     width: 100%;
-    background: 
-    linear-gradient(
-      to right,
-      rgba($primary-color, 0.9),
-      rgba($primary-color, 0.3),
-    ),
-    url('../img/woman.jpg') center top;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url("../img/woman.jpg") center top;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -28,27 +27,36 @@
 
     .text-secondary {
       padding: 1rem;
+      color: $primary-color;
     }
   }
 
   .jobs {
     width: 60vw;
-    margin: 2rem auto 0 auto;
+    margin: 3rem auto 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
 
     &__job {
-      background: lighten($primary-color, 10%);
+      background: lighten($secondary-color, 70%);
+      border-radius: 10px;
       padding: 0.5rem;
       border-bottom: 5px solid $secondary-color;
 
-      h2, h3 {
-        margin: 0.5rem 0;
+      h2,
+      h3 {
+        margin: 1rem 0;
       }
 
-      h6 {
+      h4 {
         margin: 0.3rem 0;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      p {
+        margin: 1rem 0;
       }
     }
   }
@@ -59,7 +67,6 @@
   }
 
   footer {
-    transform: rotate(90deg)
-    translate(-3rem, -5rem);
+    transform: rotate(90deg) translate(-3rem, -5rem);
   }
 }
